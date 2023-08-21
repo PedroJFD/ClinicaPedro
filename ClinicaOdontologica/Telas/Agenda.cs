@@ -17,9 +17,14 @@ namespace ClinicaOdontologica.Telas
         public Agenda()
         {
             InitializeComponent();
+            GridAtualizar();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void GridAtualizar()
         {
             try
             {

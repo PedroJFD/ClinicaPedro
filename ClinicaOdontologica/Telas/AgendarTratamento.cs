@@ -21,8 +21,20 @@ namespace ClinicaOdontologica.Telas
         public AgendarTratamento()
         {
             InitializeComponent();
+            AtualizarNomes();
         }
+        private void AtualizarNomes()
+        {
+            string ArquivoXml = "C:\\XmlClinica\\XmlClientes\\DocumentoXml.XML";
+            XElement XML = XElement.Load(ArquivoXml);
 
+            var nomeElements = XML.Descendants("Nome");
+
+            foreach (var nomeElement in nomeElements)
+            {
+                cb_clientes.Items.Add("Nome: " + nomeElement.Value);
+            }
+        }
         private void cb_tratameto_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -54,15 +66,6 @@ namespace ClinicaOdontologica.Telas
         {
             try
             {
-                string ArquivoXml = "C:\\XmlClinica\\XmlClientes\\DocumentoXml.XML";
-                XElement XML = XElement.Load(ArquivoXml);
-
-                var nomeElements = XML.Descendants("Nome");
-
-                foreach (var nomeElement in nomeElements)
-                {
-                    cb_clientes.Items.Add("Nome: " + nomeElement.Value);
-                }
 
                 cb_clientes.Enabled = true;
                 cb_horario.Enabled = true;
