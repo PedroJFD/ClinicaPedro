@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="L012__28898" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\L012__28898.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="papel-de-parede-azul-degrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\papel-de-parede-azul-degrade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mascotepng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mascotepng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="155904889430781" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\155904889430781.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tecido-liso-azul-turquesa-claro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tecido-liso-azul-turquesa-claro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

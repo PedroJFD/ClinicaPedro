@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Bem-vindo a Sorrilândia, um lugar onde a felicidade é a nossa
+maior missão. Fundada com a visão de criar um mundo
+mais alegre e vibrante, a Sorrilândia se destaca como
+uma empresa dedicada a espalhar sorrisos e
+inspirar momentos de alegria em todos os cantos.</value>
+  </data>
 </root>

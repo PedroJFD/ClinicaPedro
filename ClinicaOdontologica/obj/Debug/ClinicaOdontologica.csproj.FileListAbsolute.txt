@@ -24,3 +24,4 @@ C:\Users\pedro\source\repos\ClinicaOdontologica\ClinicaOdontologica\obj\Debug\Cl
 C:\Users\pedro\source\repos\ClinicaOdontologica\ClinicaOdontologica\obj\Debug\ClinicaOdontologica.exe
 C:\Users\pedro\source\repos\ClinicaOdontologica\ClinicaOdontologica\obj\Debug\ClinicaOdontologica.pdb
 C:\Users\pedro\source\repos\ClinicaOdontologica\ClinicaOdontologica\obj\Debug\ClinicaOdontologica.Telas.AgendarTratamento.resources
+C:\Users\pedro\source\repos\ClinicaOdontologica\ClinicaOdontologica\obj\Debug\ClinicaOdontologica.Telas.Agenda.resources

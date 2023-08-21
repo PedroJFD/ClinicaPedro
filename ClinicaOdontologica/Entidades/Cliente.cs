@@ -13,18 +13,20 @@ namespace ClinicaOdontologica.Entidades
         public string Email { get; set; }
         public string Telefone { get; set; }
         public string Cidade { get; set; }
+        public string Sobrenome { get; set; }
 
         public Cliente()
         {
 
         }
 
-        public Cliente(string nome, string email, string telefone, string cidade)
+        public Cliente(string nome, string email, string telefone, string cidade, string sobrenome)
         {
             this.Nome = nome;
             this.Email = email;
             this.Telefone = telefone;
             this.Cidade = cidade;
+            this.Sobrenome = sobrenome;
         }
 
     }

@@ -46,8 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Tratamento.cs" />
     <Compile Include="Entidades\XmlCreator.cs" />
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Telas\Agenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Agenda.Designer.cs">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\CadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +75,9 @@
     <Compile Include="Telas\AgendarTratamento.Designer.cs">
       <DependentUpon>AgendarTratamento.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\Agenda.resx">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Telas\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -98,6 +109,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel-de-parede-azul-degrade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\155904889430781.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mascotepng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L012__28898.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tecido-liso-azul-turquesa-claro.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

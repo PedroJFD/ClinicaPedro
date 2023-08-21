@@ -16,7 +16,6 @@ namespace ClinicaOdontologica.Telas
 {
     public partial class AgendarTratamento : Form
     {
-
         public AgendarTratamento()
         {
             InitializeComponent();
@@ -39,7 +38,10 @@ namespace ClinicaOdontologica.Telas
 
         private void bt_excluir_Click(object sender, EventArgs e)
         {
-
+            cb_clientes.Text = "Cliente";
+            cb_horario.Text = "Horario";
+            cb_tratameto.Text = "Tipo Tratamento";
+            mask_data.Clear();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,20 +50,67 @@ namespace ClinicaOdontologica.Telas
 
         private void bt_novo_Click(object sender, EventArgs e)
         {
-            string ArquivoXml = "C:\\Users\\pedro\\source\\repos\\teste.XML";
-            XElement XML = XElement.Load(ArquivoXml);
-
-            var nomeElements = XML.Descendants("Nome");
-
-            foreach (var nomeElement in nomeElements)
+            try
             {
-                cb_clientes.Items.Add("Nome: " + nomeElement.Value);
+                string ArquivoXml = "C:\\XmlClinica\\XmlClientes\\DocumentoXml.XML";
+                XElement XML = XElement.Load(ArquivoXml);
+
+                var nomeElements = XML.Descendants("Nome");
+
+                foreach (var nomeElement in nomeElements)
+                {
+                    cb_clientes.Items.Add("Nome: " + nomeElement.Value);
+                }
+
+                cb_clientes.Enabled = true;
+                cb_horario.Enabled = true;
+                cb_tratameto.Enabled = true;
+                mask_data.Enabled = true;
+
+                cb_clientes.Text = "Cliente";
+                cb_horario.Text= "Horario";
+                cb_tratameto.Text = "Tipo Tratamento";
+                mask_data.Clear();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Há um erro em relação ao Xml cliente. Tente novamente!");
             }
 
-            cb_clientes.Enabled = true;
-            cb_data.Enabled = true;
-            cb_tratameto.Enabled = true;
-            mask_data.Enabled = true;
+        }
+
+        private void ok_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Tratamento t = new Tratamento();
+                t.Cliente = cb_clientes.Text;
+                t.Data = mask_data.Text;
+                t.Horario = cb_horario.Text;
+                t.TipoTratamento = cb_tratameto.Text;
+
+                XmlCreator xmlCreator = new XmlCreator();
+                xmlCreator.GravarXmlHorarios(t);
+
+                cb_clientes.Text = "Cliente";
+                cb_clientes.Enabled = false;
+                cb_horario.Enabled = false;
+                cb_tratameto.Enabled = false;
+                mask_data.Enabled = false;
+
+                MessageBox.Show("Agendamento concluido.");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Há um erro de digitação. Tente novamente!");
+            }
+        }
+
+        private void AgendarTratamento_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

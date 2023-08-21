@@ -32,19 +32,31 @@ namespace ClinicaOdontologica
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
-            c.Cidade = cb_cidade.Text;
-            c.Nome = tx_nome.Text;
-            c.Email = tx_email.Text;
-            c.Telefone = tx_telefone.Text;
+            try
+            {
+                Cliente c = new Cliente();
+                c.Cidade = cb_cidade.Text;
+                c.Nome = tx_nome.Text;
+                c.Email = tx_email.Text;
+                c.Telefone = mask_telefone.Text;
+                c.Sobrenome = tx_segundonome.Text;
 
-            XmlCreator xmlCreator = new XmlCreator();
-            xmlCreator.GravarXml(c);
+                XmlCreator xmlCreator = new XmlCreator();
+                xmlCreator.GravarXml(c);
 
-            tx_nome.Clear();
-            tx_email.Clear();
-            tx_telefone.Clear();
-            cb_cidade.SelectedIndex = -1;
+                tx_nome.Clear();
+                tx_email.Clear();
+                mask_telefone.Clear();
+                tx_segundonome.Clear();
+                cb_cidade.SelectedIndex = -1;
+
+                MessageBox.Show("Cliente cadastrado com sucesso.");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Há um erro de digitação. Tente novamente!");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
