@@ -44,10 +44,10 @@ namespace ClinicaOdontologica
                 XmlCreator xmlCreator = new XmlCreator();
                 xmlCreator.GravarXml(c);
 
-                tx_nome.Clear();
-                tx_email.Clear();
+                tx_nome.Text = "Nome";
+                tx_segundonome.Text = "Sobrenome";
+                tx_email.Text = "Email";
                 mask_telefone.Clear();
-                tx_segundonome.Clear();
                 cb_cidade.Text = "Cidade";
 
                 MessageBox.Show("Cliente cadastrado com sucesso.");
