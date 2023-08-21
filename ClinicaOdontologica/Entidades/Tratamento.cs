@@ -26,8 +26,6 @@ namespace ClinicaOdontologica.Entidades
             this.Horario = horario;
             this.TipoTratamento = tipoTratamento;
         }
-
-
     }
 }
 

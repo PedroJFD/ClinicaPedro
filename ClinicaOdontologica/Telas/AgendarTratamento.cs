@@ -16,6 +16,8 @@ namespace ClinicaOdontologica.Telas
 {
     public partial class AgendarTratamento : Form
     {
+        List<string> disponibilidade = new List<string>();
+        List<string> disponibilidadehora = new List<string>();
         public AgendarTratamento()
         {
             InitializeComponent();
@@ -75,7 +77,7 @@ namespace ClinicaOdontologica.Telas
             catch (Exception ex)
             {
 
-                MessageBox.Show("Há um erro em relação ao Xml cliente. Tente novamente!");
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -104,7 +106,7 @@ namespace ClinicaOdontologica.Telas
             catch (Exception ex)
             {
 
-                MessageBox.Show("Há um erro de digitação. Tente novamente!");
+                MessageBox.Show(ex.Message);
             }
         }
 

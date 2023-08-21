@@ -33,7 +33,7 @@ namespace ClinicaOdontologica.Telas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xml não existente ou vazia. Tente Agendar um tratamento primeiro.");
+                MessageBox.Show(ex.Message);
             }
         }
     }

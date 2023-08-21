@@ -48,14 +48,14 @@ namespace ClinicaOdontologica
                 tx_email.Clear();
                 mask_telefone.Clear();
                 tx_segundonome.Clear();
-                cb_cidade.SelectedIndex = -1;
+                cb_cidade.Text = "Cidade";
 
                 MessageBox.Show("Cliente cadastrado com sucesso.");
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Há um erro de digitação. Tente novamente!");
+                MessageBox.Show(ex.Message);
             }
         }
 
